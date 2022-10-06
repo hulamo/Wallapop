@@ -1,0 +1,65 @@
+{
+  "users": [
+    {
+      "nombre": "Hugo",
+      "username": "hugoladislao@gmail.com",
+      "apellido": "Moreno",
+      "password": "$2b$10$.aD9lnqtK3EjvyZncoPt3uG9Cpt57XnvH7skFReyG10P/yZWC03..",
+      "id": 1
+    }
+  ],
+  "anuncios": [
+    {
+      "idu": "1",
+      "username": "hugoladislao@gmail.com",
+      "titulo": "Bicicleta 1",
+      "descripcion": "Esta es la mejor bicicleta que puedes encontrar",
+      "compra": "venta",
+      "tags": "[\"Bicileta\"]",
+      "nombrefoto": "http://localhost:8000//file-1665041496263.jpeg",
+      "precio": "1200",
+      "userId": 1,
+      "updatedAt": "2022-10-06T07:31:36.277Z",
+      "id": 1
+    },
+    {
+      "idu": "1",
+      "username": "hugoladislao@gmail.com",
+      "titulo": "Busco Bicicleta Eléctrica",
+      "descripcion": "Busco bicicleta eléctrica en buen estado",
+      "compra": "compra",
+      "tags": "[\"Compro\",\"Bicicleta Eléctrica\"]",
+      "nombrefoto": "sinFoto",
+      "precio": "1350",
+      "userId": 1,
+      "updatedAt": "2022-10-06T07:39:09.382Z",
+      "id": 2
+    },
+    {
+      "idu": "1",
+      "username": "hugoladislao@gmail.com",
+      "titulo": "Vendo Bicicleta Naranja",
+      "descripcion": "Vendo una bicicleta naranja en buen estado",
+      "compra": "venta",
+      "tags": "[\"Muy Barata\",\"Naranja\",\"Bicicleta\"]",
+      "nombrefoto": "http://localhost:8000//file-1665042105841.jpeg",
+      "precio": "550",
+      "userId": 1,
+      "updatedAt": "2022-10-06T07:41:45.847Z",
+      "id": 3
+    },
+    {
+      "idu": "1",
+      "username": "hugoladislao@gmail.com",
+      "titulo": "Toyota Camry",
+      "descripcion": "Vendo Toyota Camry poco kilometraje",
+      "compra": "venta",
+      "tags": "[\"Camry\",\"Toyota\"]",
+      "nombrefoto": "http://localhost:8000//file-1665043777771.jpeg",
+      "precio": "33000",
+      "userId": 1,
+      "updatedAt": "2022-10-06T08:09:37.776Z",
+      "id": 4
+    }
+  ]
+}

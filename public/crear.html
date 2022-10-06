@@ -30,6 +30,12 @@
                     <textarea onkeydown="validar(this.value)" class="form-control" id="cdescripcion" class="form-control" row="3"></textarea>
                     
                   </div>
+
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="cprecio">*Precio</label>
+                    <input type="number" onkeydown="validar(this.value)" class="form-control" id="cprecio" class="form-control" row="3"></input>
+                    
+                  </div>
                   <div class="form-outline mb-4">
                   <div class="form-check">
                     <input class="form-check-input" type="radio" name="ccompra" id="cventa"  value="venta" checked>
@@ -63,14 +69,14 @@ Prueba
   
           <div class="mb-3">
             <label for="formFile" class="form-label">Seleccionar Archivo</label>
-            <input class="form-control" type="file" id="formFile">
+            <input class="form-control" type="file" accept="image/png, image/gif, image/jpeg" id="formFile">
           </div>
        
 
             <!-- 2 column grid layout for inline styling -->
                  
             <!-- Submit button -->
-            <button  onclick="registrar()" type="button" id="cpublicar" class="btn btn-primary btn-block mb-4 " disabled="disabled">Publicar</button>
+            <button  onclick="registraranuncio()" type="button" id="cpublicar" class="btn btn-primary btn-block mb-4 " disabled="disabled">Publicar</button>
           
  
           

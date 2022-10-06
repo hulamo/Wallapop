@@ -28,11 +28,13 @@ for (var x in datos) {
     let id=datos[x].id
     let idu=datos[x].idu
     let titulo=datos[x].titulo
+    let precio=datos[x].precio
     let descripcion=datos[x].descripcion
     let tags=datos[x].tags
 
 texto=texto+`<a  >${titulo}<a>`
 texto=texto+ `<p>${descripcion}<p>`
+texto=texto+ `<p>${precio}<p>`
 texto=texto+ `<p>${tags}<p>`
 texto=texto+ `<p></p>`
 console.log(iduser)
