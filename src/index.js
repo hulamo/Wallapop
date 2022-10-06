@@ -1,14 +1,34 @@
 
 import { pintarError, pintarMensaje } from "./mensajes.js";
 
+import { filtrar2} from "./filtrar.js";
+import { pintardatos } from "./pintardatos.js";
+
+window.filtrar = async (valor) =>{
+  const datos = await filtrar2(valor)
+  console.log("datos;",datos)
+  window.document.getElementById("dataanuncios").innerHTML=pintardatos(datos)
+}
+
+
 const LSnombre= localStorage.getItem("nombre")
 
+//window.onload = ()=> {
+  window.addEventListener('load', function() {
+  var base_url = window.location.origin;
+  console.log("Prueba Log")
+  console.log(base_url)
+  let crear=base_url+"/public/crear.html"
+  let home=base_url+"/index.html"
+  window.document.getElementById('navbarcrear').setAttribute('href', crear);
+  window.document.getElementById('navbarhome').setAttribute('href', home);
+  })
 
 
 console.log("LsNombre",LSnombre)
 if (!LSnombre && ! window.location.href.includes("login") && ! window.location.href.includes("register"))
 {
-    window.location.replace("./login.html")
+    window.location.replace("../public/login.html")
 }
 
 let logueado =1 
@@ -22,7 +42,7 @@ console.log("Paso por aqui")
 window.logout = () => {
 
     localStorage.clear()
-    window.location.replace("./login.html")
+    window.location.replace("../public/login.html")
 }
 
 const consola =  () => {
@@ -33,7 +53,7 @@ const consola =  () => {
     console.log(email)
 
 
-//location.replace("/index.html")
+
 }
 
 window.registrarusuario = () => {
@@ -81,6 +101,8 @@ window.registrar = () => {
     let username=localStorage.getItem("usuario")
     let tags=localStorage.getItem("tags")
     let id=localStorage.getItem("id")
+    let input = document.getElementById('formFile')
+    console.log("Input:",input.files[0])
     //let username=""
     let titulo=window.document.getElementById("ctitulo").value
     let descripcion=window.document.getElementById("cdescripcion").value
@@ -116,6 +138,19 @@ console.log("Entro Aquí")
 
       const content = await rawResponse.json();
 console.log(content)
+
+let tags=[]
+localStorage.setItem("tags", JSON.stringify(tags));
+window.document.getElementById("cbotones").innerHTML=""
+//let username=""
+window.document.getElementById("ctitulo").value=""
+window.document.getElementById("cdescripcion").value=""
+window.document.getElementById('formFile').value=""
+
+window.document.getElementById('ccompra').checked=true
+pintarMensaje("Se creó el anuncio con éxito") 
+
+
 console.log("postanuncio")
 }
 
@@ -157,7 +192,7 @@ const traer= async (email,password) => {
         localStorage.setItem("id", idtemp);
         localStorage.setItem("usuario", usuariotemp);
         localStorage.setItem("token", content.accessToken);
-        window.location.replace("./index.html")
+        window.location.replace("../index.html")
     } else {
         localStorage.setItem("usuario", "");
         console.log("Hubo un error")
@@ -188,9 +223,9 @@ if (content.username) {
     document.getElementById("rapellido").value=""
     document.getElementById("remail").value=""
     document.getElementById("rpassword").value=""
-   let mensaje= "<p><a>Registro exitoso ya puedes hacer</a><a href='./login.html'>Login</a></p>"
+   let mensaje= "<p><a>Registro exitoso ya puedes hacer </a><a href='./login.html'>Login</a></p>"
     pintarMensaje(mensaje)
-    //window.location.replace("./index.html")
+
    
 } else {
     localStorage.setItem("usuario", "");

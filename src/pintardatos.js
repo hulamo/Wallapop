@@ -1,20 +1,5 @@
-const mostrar= async (email,password) => {
-
-    
-    const textofetch= "http://localhost:8000/api/anuncios"
-   
-    const getResponse = await fetch(textofetch);
-
-    const data = await getResponse.json()
-
-    return data
-}
-
-
-
-const datos =await mostrar()
-
-function pintardatos(datos)  {
+export function pintardatos(datos)  {
+    console.log("Pintando ")
     let texto ="<p></p>"
 console.log("Datos:" ,datos)
     if (datos.length==0){
@@ -27,7 +12,7 @@ for (var x in datos) {
     let descripcion=datos[x].descripcion
     let tags=datos[x].tags
 
-texto=texto+`<a href='./detalle.html?id=${id}' >${titulo}<a>`
+texto=texto+`<a href='./public/detalle.html?id=${id}' >${titulo}<a>`
 texto=texto+ `<p>${descripcion}<p>`
 texto=texto+ `<p>${tags}<p>`
 texto=texto+ `<p></p>`
@@ -38,7 +23,3 @@ texto=texto+ `<p>------------------------</p>`
 
 } } return texto
 }
-
-window.document.getElementById("dataanuncios").innerHTML=pintardatos(datos)
-
-

@@ -25,8 +25,8 @@ temptags.push(element)
 
 }
 
-window.onload=(function(){
-
+//window.onload=(function(){
+    window.addEventListener('load', function() {
 let tags=[]
 localStorage.setItem("tags", JSON.stringify(tags));
 

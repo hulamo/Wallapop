@@ -16,16 +16,17 @@
             <p class="text-center font-weight-bold">Nuevo Anuncio</p>
         </div>
         <div id="errores"></div>
+        <div id="mensajes"></div>
             <form>
          
                 <div class="form-outline mb-4">
-                    <label class="form-label" for="ctitulo">Título</label>
+                    <label class="form-label" for="ctitulo">*Título</label>
                     <input onkeydown="validar(this.value)" type="text" id="ctitulo" class="form-control" />
                     
                   </div>
 
                   <div class="form-outline mb-4">
-                    <label class="form-label" for="cdescripcion">Descripción</label>
+                    <label class="form-label" for="cdescripcion">*Descripción</label>
                     <textarea onkeydown="validar(this.value)" class="form-control" id="cdescripcion" class="form-control" row="3"></textarea>
                     
                   </div>
@@ -91,10 +92,20 @@ Prueba
         $("#navbar").load("navbar.html");
       })</script>
 
+<script>$(function(event){
+  console.log(event)
+  $("#errores").load("error.html");
+})</script>
+ 
+ <script>$(function(event){
+  console.log(event)
+  console.log("Paso por Mensaje")
+  $("#mensajes").load("mensaje.html");
+})</script>
 
 </body>
-<script type="module" src="index.js" ></script> 
-<script type="module" src="navbar.js" ></script> 
-<script type="module" src="tags.js" ></script> 
-<script type="module" src="validar.js" ></script> 
+<script type="module" src="../src/index.js" ></script> 
+<script type="module" src="../src/navbar.js" ></script> 
+<script type="module" src="../src/tags.js" ></script> 
+<script type="module" src="../src/validar.js" ></script> 
 </html>

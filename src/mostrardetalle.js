@@ -39,8 +39,10 @@ console.log(iduser)
 console.log(id)
 
 if(iduser == idu){
-    texto=texto+ `<a onclick='confirmar(${id})'>borrar<a>`
+    texto=texto+ `<p><button type="button" class="btn btn-danger" onclick='confirmar(${id})'>Eliminar</button></p>`
 }
+
+
 texto=texto+ `<p>------------------------</p>`
 
     
